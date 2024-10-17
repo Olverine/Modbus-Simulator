@@ -13,20 +13,6 @@ class TableTabContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         tabEdge: TabEdge.top,
         curve: Curves.easeIn,
-        transitionBuilder: (child, animation) {
-          animation = CurvedAnimation(
-              curve: Curves.easeIn, parent: animation);
-          return SlideTransition(
-            position: Tween(
-              begin: const Offset(0.2, 0.0),
-              end: const Offset(0.0, 0.0),
-            ).animate(animation),
-            child: FadeTransition(
-              opacity: animation,
-              child: child,
-            ),
-          );
-        },
         selectedTextStyle: const TextStyle(fontSize: 18),
         unselectedTextStyle: const TextStyle(fontSize: 16),
         tabs: _getTabs(),

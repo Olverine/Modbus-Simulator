@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spreadsheet_ui/flutter_spreadsheet_ui.dart';
 import 'package:modbus_simulator/widgets/table_tab_container.dart';
 
 void main() {
@@ -60,9 +59,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: TableTabContainer()
     );
   }
